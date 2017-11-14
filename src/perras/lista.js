@@ -17,9 +17,9 @@ class Element extends Component{
   render(){
     return(
       <TableRow>
-        <TableRowColumn>{this.props.casoId}</TableRowColumn>
-        <TableRowColumn>{this.props.casoNombre}</TableRowColumn>
-        <TableRowColumn>{this.props.casoProfesion}</TableRowColumn>
+        <TableRowColumn>{this.props.id}</TableRowColumn>
+        <TableRowColumn>{this.props.nombre}</TableRowColumn>
+        <TableRowColumn>{this.props.profesion}</TableRowColumn>
       </TableRow>
     );
   }
@@ -43,7 +43,7 @@ class TableExampleSimple extends Component {
         </TableHeader>
         <TableBody>
         {this.props.datos.map((it)=>{
-          return(<Element casoId={it.casoId} casoNombre={it.casoNombre} casoProfesion={it.casoProfesion}/>)
+          return(<Element id={it.id} nombre={it.nombre} profesion={it.profesion}/>)
         })}
         </TableBody>
       </Table>
